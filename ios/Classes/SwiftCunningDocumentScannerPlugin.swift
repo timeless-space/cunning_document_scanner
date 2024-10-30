@@ -30,6 +30,8 @@ public class SwiftCunningDocumentScannerPlugin: NSObject, FlutterPlugin, VNDocum
             } else {
                 result(FlutterError(code: "UNAVAILABLE", message: "Document camera is not available on this device", details: nil))
             }
+        } else if call.method == "dismiss" {
+            self.presentingController?.dismiss(animated: true)
         } else {
             result(FlutterMethodNotImplemented)
         }

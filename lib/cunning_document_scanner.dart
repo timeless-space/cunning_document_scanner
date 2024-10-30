@@ -24,4 +24,8 @@ class CunningDocumentScanner {
     });
     return pictures?.map((e) => e as String).toList();
   }
+
+  static Future<void> dismiss() async {
+    await _channel.invokeMethod('dismiss');
+  }
 }
