@@ -52,7 +52,7 @@ class CunningDocumentScannerPlugin : FlutterPlugin, MethodCallHandler, ActivityA
             startScan(noOfPages, isGalleryImportAllowed)
         } else if (call.method == "dismiss") {
             finish()
-            result.success()
+            result.success(null)
         } else {
             result.notImplemented()
         }
