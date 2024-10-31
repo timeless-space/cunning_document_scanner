@@ -50,6 +50,9 @@ class CunningDocumentScannerPlugin : FlutterPlugin, MethodCallHandler, ActivityA
             val isGalleryImportAllowed = call.argument<Boolean>("isGalleryImportAllowed") ?: false;
             this.pendingResult = result
             startScan(noOfPages, isGalleryImportAllowed)
+        } else if (call.method == "dismiss") {
+            finish()
+            result.success()
         } else {
             result.notImplemented()
         }

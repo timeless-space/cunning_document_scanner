@@ -32,6 +32,7 @@ public class SwiftCunningDocumentScannerPlugin: NSObject, FlutterPlugin, VNDocum
             }
         } else if call.method == "dismiss" {
             self.presentingController?.dismiss(animated: true)
+            result(nil)
         } else {
             result(FlutterMethodNotImplemented)
         }
